@@ -2,82 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>nicholas.sh</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div class="container">
-        <header>
+    <div class="terminal-container">
+        <!-- Header -->
+        <div class="terminal-header">
             <h1>> nicholas.sh</h1>
-            <nav class="top-right-links">
-                <a href="/about">About</a>
-                <a href="/contact">Contact</a>
+            <nav class="nav-links">
+                <a href="#home">home</a>
+                <a href="#about">about</a>
+                <a href="#projects">projects</a>
+                <a href="#contact">contact</a>
             </nav>
-        </header>
-
-        <section class="home-section">
+            <img src="profile.jpg" alt="nicholas" class="profile-pic">
+        </div>
+        <!-- Home Section -->
+        <div id="home" class="terminal-box">
             <div class="terminal-prompt">
-                <span class="user">nicholas@portfolio</span>
+                <span class="user">n@p</span>
                 <span class="path">~/home</span>
                 <span class="prompt">$</span>
             </div>
-            <div class="command-list">
+            <div class="terminal-content">
                 <p>> Welcome to my interactive portfolio</p>
                 <p>> Available commands:</p>
-                <ul class="commands">
-                    <li><span class="command">about</span> - Learn about me</li>
-                    <li><span class="command">projects</span> - See my work</li>
-                    <li><span class="command">contact</span> - Get in touch</li>
+                <ul class="command-list">
+                    <li><a href="#about">about</a> - Learn about me</li>
+                    <li><a href="#projects">projects</a> - See my work</li>
+                    <li><a href="#contact">contact</a> - Get in touch</li>
                 </ul>
             </div>
-        </section>
+        </div>
 
-        <main>
-            <section id="about">
-                <h2>About</h2>
-                <p>Hi, I'm Nicholas, a student and tech enthusiast...</p>
-            </section>
+        <!-- About Section -->
+        <div id="about" class="terminal-box">
+            <div class="terminal-prompt">
+                <span class="user">n@p</span>
+                <span class="path">~/about</span>
+                <span class="prompt">$</span>
+                <span class="command"></span>
+            </div>
+            <div class="terminal-content">
+                <p>Hi, I'm Nicholas, a student and tech enthusiast passionate about cybersecurity, data science, and web applications. I specialize in Python, Bash, Wireshark, and React.</p>
+            </div>
+        </div>
 
-            <section id="projects">
-                <h2>Projects</h2>
-                <ul class="project-list">
-                    <li>
-                        <strong>Terminal ChatApp</strong> | Python, SSH
-                        <p>A secure command-line chat application using SSH tunneling that enables encrypted communication between two users directly from their terminals.</p>
-                        <span class="tech">Python • Paramiko • Socket Programming</span>
-                    </li>
-                    <li>
-                        <strong>Hotel Management System</strong> | Python, MySQL
-                        <p>Desktop application for managing hotel operations including room booking, staff management, and billing with automated PDF receipts.</p>
-                        <span class="tech">Python • Tkinter • MySQL • ReportLab</span>
-                    </li>
-                    <li>
-                        <strong>PayPal Simulator</strong> | Flask, MySQL
-                        <p>Web application simulating PayPal's core functionality with email-to-email transactions and balance verification.</p>
-                        <span class="tech">Python • Flask • MySQL • Jinja2</span>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="get-started">
-                <h2>Get Started</h2>
-                <div class="terminal-command">
-                    <span class="command-text">curl -st https://ysap.sh | bash</span>
-                    <span class="cursor">█</span>
+        <!-- Projects Section -->
+        <div id="projects" class="terminal-box">
+            <div class="terminal-prompt">
+                <span class="user">n@p</span>
+                <span class="path">~/projects</span>
+                <span class="prompt">$</span>
+                <span class="command"></span>
+            </div>
+            <div class="terminal-content">
+                <div class="project-item">
+                    <h3> > Terminal ChatApp <span class="tech-tag">Python, SSH</span></h3>
+                    <p>A secure command-line chat application using SSH tunneling that enables encrypted communication between two users directly from their terminals.</p>
+                    <span class="tech-stack">Python · Paramiko · Socket Programming</span>
                 </div>
-            </section>
-        </main>
+                <div class="project-item">
+                    <h3> > Hotel Management System <span class="tech-tag">Python, MySQL</span></h3>
+                    <p>Desktop application for managing hotel operations including room booking, staff management, and billing with automated PDF receipts.</p>
+                    <span class="tech-stack">Python · Tkinter · MySQL · ReportLab</span>
+                  </div>
+                <div class="project-item">
+                    <h3><strong>> PayPal Simulator</strong> <span class="tech-tag"> Flask, MySQL</span> </h3>
+                    <p>Web application simulating PayPal's core functionality.</p>
+                    <span class="tech-stack">Python · Flask · MySQL</span>
+                </div>
+            </div>
+        </div>
 
-        <footer>
-            © <span class="current-year"></span> Nicholas. All rights reserved.
-        </footer>
+        <!-- Contact Section -->
+        <div id="contact" class="terminal-box">
+            <div class="terminal-prompt">
+                <span class="user">nicholas@portfolio</span>
+                <span class="path">~/contact</span>
+                <span class="prompt">$</span>
+                <span class="command"></span>
+            </div>
+            <div class="terminal-content">
+                <p>Let's connect and collaborate!</p>
+                <div class="contact-methods">
+                    <a href="mailto:omondigodwin48@gmail.com">Email</a>
+                    <a href="https://github.com/NicholasGodwin48" >GitHub</a>
+                    <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <script>
-        // Update copyright year automatically
-        document.querySelector('.current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
