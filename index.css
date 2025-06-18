@@ -1,0 +1,196 @@
+/* Base Styles */
+body {
+    font-family: 'Fira Mono', monospace;
+    background: #000000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    flex: 1;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    margin-bottom: 2em;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #00FF40;
+}
+
+h2 {
+    color: #00FF40;
+    border-bottom: 1px dashed #00FF40;
+    padding-bottom: 0.5em;
+    margin-top: 0;
+}
+
+/* Navigation Links */
+.top-right-links {
+    display: flex;
+    gap: 1.5em;
+}
+
+.top-right-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    padding: 0.2em 0;
+}
+
+.top-right-links a:hover {
+    color: #00FF40;
+    text-decoration: underline;
+    text-decoration-color: #00FF40;
+    text-underline-offset: 3px;
+}
+
+/* Home Section */
+.home-section {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5em;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    border: 1px solid #00FF40;
+}
+
+.terminal-prompt {
+    color: #00FF40;
+    margin-bottom: 1em;
+}
+
+.user { color: #4E9A06; }
+.path { color: #729FCF; }
+.prompt { color: #FF0000; margin-left: 5px; }
+
+.command-list {
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.command-list p {
+    margin: 0.5em 0;
+}
+
+.commands {
+    list-style-type: none;
+    padding-left: 1em;
+}
+/* Projects Section Styling */
+.project-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-list li {
+    margin-bottom: 2em;
+    padding: 1em;
+    border-left: 3px solid #00FF40;
+    background: rgba(0, 255, 64, 0.05);
+    transition: all 0.3s ease;
+}
+
+.project-list li:hover {
+    background: rgba(0, 255, 64, 0.1);
+}
+
+.project-list strong {
+    color: #00FF40;
+    font-size: 1.1em;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.project-list p {
+    margin: 0.5em 0;
+    line-height: 1.5;
+}
+
+.tech {
+    display: inline-block;
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+.command {
+    color: #00FF40;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    border: 1px solid #00FF40;
+    border-radius: 8px;
+    padding: 2em;
+    margin: 1em 0;
+}
+
+.project-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.project-list li {
+    margin-bottom: 0.5em;
+    position: relative;
+    padding-left: 1.5em;
+}
+
+.project-list li::before {
+    content: ">";
+    color: #00FF40;
+    position: absolute;
+    left: 0;
+}
+
+/* Terminal Command */
+.terminal-command {
+    font-family: 'Fira Mono', monospace;
+    background-color: #000;
+    padding: 0.5em;
+    display: inline-block;
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.8em;
+    height: 1em;
+    background-color: #ffffff;
+    animation: blink 1s step-end infinite;
+    vertical-align: 0.1em;
+    margin-left: 2px;
+}
+
+/* Footer */
+footer {
+    color: #888;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 1em;
+    border-top: 1px solid #00FF40;
+    margin-top: 2em;
+}
+
+/* Animations */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}

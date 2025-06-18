@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nicholas.sh</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>> nicholas.sh</h1>
+            <nav class="top-right-links">
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            </nav>
+        </header>
+
+        <section class="home-section">
+            <div class="terminal-prompt">
+                <span class="user">nicholas@portfolio</span>
+                <span class="path">~/home</span>
+                <span class="prompt">$</span>
+            </div>
+            <div class="command-list">
+                <p>> Welcome to my interactive portfolio</p>
+                <p>> Available commands:</p>
+                <ul class="commands">
+                    <li><span class="command">about</span> - Learn about me</li>
+                    <li><span class="command">projects</span> - See my work</li>
+                    <li><span class="command">contact</span> - Get in touch</li>
+                </ul>
+            </div>
+        </section>
+
+        <main>
+            <section id="about">
+                <h2>About</h2>
+                <p>Hi, I'm Nicholas, a student and tech enthusiast...</p>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul class="project-list">
+                    <li>
+                        <strong>Terminal ChatApp</strong> | Python, SSH
+                        <p>A secure command-line chat application using SSH tunneling that enables encrypted communication between two users directly from their terminals.</p>
+                        <span class="tech">Python • Paramiko • Socket Programming</span>
+                    </li>
+                    <li>
+                        <strong>Hotel Management System</strong> | Python, MySQL
+                        <p>Desktop application for managing hotel operations including room booking, staff management, and billing with automated PDF receipts.</p>
+                        <span class="tech">Python • Tkinter • MySQL • ReportLab</span>
+                    </li>
+                    <li>
+                        <strong>PayPal Simulator</strong> | Flask, MySQL
+                        <p>Web application simulating PayPal's core functionality with email-to-email transactions and balance verification.</p>
+                        <span class="tech">Python • Flask • MySQL • Jinja2</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="get-started">
+                <h2>Get Started</h2>
+                <div class="terminal-command">
+                    <span class="command-text">curl -st https://ysap.sh | bash</span>
+                    <span class="cursor">█</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            © <span class="current-year"></span> Nicholas. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        // Update copyright year automatically
+        document.querySelector('.current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
