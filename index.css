@@ -1,8 +1,11 @@
 /* Base Styles */
 body {
     font-family: 'Fira Mono', monospace;
-    background: #888585;
+    background: #000000;
     color: #fff;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), /* Dark overlay */
+        url('back.jpg') center/cover no-repeat fixed;
     margin: 0;
     padding: 2em;
 }
@@ -18,10 +21,12 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
-    animation: float 3s ease-in-out infinite;
-    
+    animation: float 3s ease-in-out infinite alternate;
 }
-
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
 
 .terminal-header h1 {
     color: #00FF40;
@@ -66,9 +71,8 @@ body {
 
 .terminal-content {
     padding: 0 1em;
-    transform: translateZ(10px); /* Puts text "closer" to viewer */
+    
 }
-
 
 /* Projects Styling */
 .project-item {
@@ -132,10 +136,7 @@ body {
 }
 
 /* Adjust navigation spacing */
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
-}
+
 /* Floating Container Effect */
 .terminal-box {
     border: 1px solid #00FF40;
@@ -144,7 +145,6 @@ body {
 transform: perspective(500px) rotateX(0.5deg);
     margin-bottom: 2em;
     padding: 1.5em;
-    
     background: rgba(0, 10, 0, 0.3); /* Darker translucent background */
     box-shadow: 
         0 4px 20px rgba(0, 255, 64, 0.15), /* Green glow */
@@ -182,3 +182,67 @@ transform: perspective(500px) rotateX(0.5deg);
 #projects { z-index: 3; }
 #contact { z-index: 2; }
 
+/* Terminal Footer */
+.terminal-footer {
+    background: rgba(0, 5, 0, 0.7);
+    border-top: 1px solid #00FF40;
+    padding: 1.5em;
+    margin-top: 3em;
+    border-radius: 0 0 8px 8px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 -4px 20px rgba(0, 255, 64, 0.1);
+}
+.terminal-footer::before {
+    content: "────────────────────────────────────────";
+    display: block;
+    color: #00FF40;
+    opacity: 0.3;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.footer-content {
+    font-family: 'Fira Mono', monospace;
+    color: #00FF40;
+    margin-bottom: 1em;
+}
+
+.footer-command {
+    color: #4E9A06; /* Green username */
+}
+
+.footer-text {
+    color: #729FCF; /* Blue command text */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #00FF40;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    background: rgba(0, 255, 64, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Blinking cursor */
+.footer-content .cursor {
+    display: inline-block;
+    width: 0.7em;
+    height: 1em;
+    background: #00FF40;
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+    margin-left: 2px;
+}
