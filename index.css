@@ -1,7 +1,7 @@
 /* Base Styles */
 body {
     font-family: 'Fira Mono', monospace;
-    background: #000;
+    background: #888585;
     color: #fff;
     margin: 0;
     padding: 2em;
@@ -18,7 +18,10 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1em;
+    animation: float 3s ease-in-out infinite;
+    
 }
+
 
 .terminal-header h1 {
     color: #00FF40;
@@ -63,7 +66,9 @@ body {
 
 .terminal-content {
     padding: 0 1em;
+    transform: translateZ(10px); /* Puts text "closer" to viewer */
 }
+
 
 /* Projects Styling */
 .project-item {
@@ -127,4 +132,53 @@ body {
 }
 
 /* Adjust navigation spacing */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+/* Floating Container Effect */
+.terminal-box {
+    border: 1px solid #00FF40;
+    border-radius: 8px;
+    transform-style: preserve-3d;
+transform: perspective(500px) rotateX(0.5deg);
+    margin-bottom: 2em;
+    padding: 1.5em;
+    
+    background: rgba(0, 10, 0, 0.3); /* Darker translucent background */
+    box-shadow: 
+        0 4px 20px rgba(0, 255, 64, 0.15), /* Green glow */
+        0 2px 6px rgba(0, 255, 64, 0.1),    /* Soft spread */
+        0 0 0 1px rgba(0, 255, 64, 0.05);   /* Subtle border highlight */
+    transition: transform 0.4s ease, box-shadow 0.3s ease; /* Smooth tilt on hover */
+    backdrop-filter: blur(4px); /* Frosted glass effect */
+}
+
+/* Hover Enhancement */
+.terminal-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 25px rgba(0, 255, 64, 0.25),
+        0 4px 10px rgba(0, 255, 64, 0.15),
+        0 0 0 1px rgba(0, 255, 64, 0.1);
+    transform: perspective(500px) rotateX(1deg) translateY(-5px)
+}
+
+/* Header Floating Effect */
+.terminal-header {
+    position: relative;
+    z-index: 10;
+    background: rgba(0, 5, 0, 0.4);
+    backdrop-filter: blur(6px);
+    padding: 1em;
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+    box-shadow: 0 2px 15px rgba(0, 255, 64, 0.1);
+}
+
+/* Depth for Sections */
+#home { z-index: 5; }
+#about { z-index: 4; }
+#projects { z-index: 3; }
+#contact { z-index: 2; }
 
